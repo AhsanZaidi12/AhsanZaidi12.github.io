@@ -148,6 +148,45 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;text-align:center;
   .hero-stats{gap:1.5rem;}
   .divider{margin:0 1.25rem;}
 }
+
+/* ── MULTIDISCIPLINARY ORBIT ── */
+.multi-wrap{padding:5rem 2.5rem;max-width:920px;margin:0 auto;}
+.orbit-container{position:relative;width:100%;height:520px;display:flex;align-items:center;justify-content:center;}
+.orbit-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.orbit-center{position:absolute;width:140px;height:140px;border-radius:50%;background:var(--bg3);border:2px solid rgba(78,237,184,0.5);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:10;box-shadow:0 0 40px rgba(78,237,184,0.15),0 0 80px rgba(78,237,184,0.05);}
+.orbit-center-title{font-family:'DM Serif Display',serif;font-size:13px;color:var(--text);line-height:1.3;}
+.orbit-center-sub{font-family:'DM Mono',monospace;font-size:9px;color:var(--accent);letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;}
+.orbit-node{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:translate(-50%,-50%);cursor:default;}
+.orbit-node-dot{width:72px;height:72px;border-radius:50%;background:var(--bg3);border:1px solid var(--border2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;transition:border-color 0.3s,box-shadow 0.3s;}
+.orbit-node:hover .orbit-node-dot{border-color:rgba(78,237,184,0.5);box-shadow:0 0 20px rgba(78,237,184,0.15);}
+.orbit-node-icon{font-size:18px;line-height:1;}
+.orbit-node-label{font-family:'DM Mono',monospace;font-size:7.5px;color:var(--muted2);letter-spacing:0.04em;text-transform:uppercase;line-height:1.3;text-align:center;padding:0 4px;}
+
+/* ── STATS ROW ── */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:3rem;}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1.5rem 1rem;text-align:center;transition:border-color 0.25s;}
+.stat-card:hover{border-color:rgba(78,237,184,0.3);}
+.stat-card-num{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--accent);line-height:1;}
+.stat-card-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-top:0.4rem;}
+
+/* ── TESTIMONIALS ── */
+.testimonials-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1rem;}
+.tval-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color 0.25s,transform 0.2s;}
+.tval-card:hover{border-color:rgba(78,237,184,0.25);transform:translateY(-2px);}
+.tval-quote{font-size:13px;color:var(--muted2);line-height:1.8;margin-bottom:1.25rem;font-style:italic;}
+.tval-quote::before{content:'\201C';font-family:'DM Serif Display',serif;font-size:2rem;color:var(--accent);opacity:0.5;line-height:0;vertical-align:-0.5rem;margin-right:4px;}
+.tval-person{display:flex;align-items:center;gap:0.75rem;}
+.tval-avatar{width:36px;height:36px;border-radius:50%;background:var(--bg4);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);flex-shrink:0;}
+.tval-name{font-size:13px;font-weight:500;color:var(--text);}
+.tval-role{font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:0.03em;}
+
+/* ── TEACHING ── */
+.teaching-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.teaching-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color 0.2s;}
+.teaching-card:hover{border-color:rgba(78,237,184,0.25);}
+.teaching-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+.teaching-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:0.25rem;}
+.teaching-desc{font-size:12px;color:var(--muted2);line-height:1.6;}
 </style>
 </head>
 <body>
@@ -158,7 +197,7 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;text-align:center;
     <li><a href="#about">about</a></li>
     <li><a href="#research">research</a></li>
     <li><a href="#projects">projects</a></li>
-    <li><a href="#papers">papers</a></li>
+    <li><a href="#multidisc">disciplines</a></li><li><a href="#papers">papers</a></li><li><a href="#testimonials">testimonials</a></li>
     <li><a href="#contact">contact</a></li>
   </ul>
 </nav>
@@ -379,6 +418,156 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;text-align:center;
 
 <hr class="divider"/>
 
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STATS ROW -->
+<!-- ═══════════════════════════════════════════ -->
+<section style="padding:3rem 2.5rem 0;max-width:920px;margin:0 auto;">
+  <div class="stats-row reveal">
+    <div class="stat-card">
+      <div class="stat-card-num">4.0</div>
+      <div class="stat-card-label">CGPA</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-num">7+</div>
+      <div class="stat-card-label">Research Areas</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-num">6</div>
+      <div class="stat-card-label">Publications</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-num">2</div>
+      <div class="stat-card-label">Languages Taught</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- MULTIDISCIPLINARY ORBIT -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="multi-wrap" id="multidisc">
+  <p class="section-label reveal">multidisciplinary research</p>
+  <p class="reveal" style="color:var(--muted2);max-width:580px;margin-bottom:2.5rem;font-size:14px;line-height:1.8;">
+    Computer Vision is the primary focus, but the research connects across
+    a wide range of domains — from IoT systems and mechatronics to NLP,
+    reinforcement learning, and network security. Each area informs the others.
+  </p>
+
+  <div class="orbit-container reveal" id="orbit-wrap">
+    <!-- SVG ring lines drawn by JS -->
+    <svg class="orbit-svg" id="orbit-svg" viewBox="0 0 800 520" preserveAspectRatio="xMidYMid meet"></svg>
+
+    <!-- CENTER NODE -->
+    <div class="orbit-center">
+      <span style="font-size:22px;">👁</span>
+      <span class="orbit-center-title">Computer<br/>Vision</span>
+      <span class="orbit-center-sub">Core</span>
+    </div>
+
+    <!-- ORBIT NODES — positioned by JS -->
+    <div class="orbit-node" id="on-cv"       data-angle="0"   data-r="185"><div class="orbit-node-dot"><span class="orbit-node-icon">🤖</span><span class="orbit-node-label">Machine<br/>Learning</span></div></div>
+    <div class="orbit-node" id="on-rl"       data-angle="45"  data-r="185"><div class="orbit-node-dot"><span class="orbit-node-icon">🎮</span><span class="orbit-node-label">Reinforcement<br/>Learning</span></div></div>
+    <div class="orbit-node" id="on-nlp"      data-angle="90"  data-r="185"><div class="orbit-node-dot"><span class="orbit-node-icon">💬</span><span class="orbit-node-label">NLP</span></div></div>
+    <div class="orbit-node" id="on-iot"      data-angle="135" data-r="185"><div class="orbit-node-dot"><span class="orbit-node-icon">📡</span><span class="orbit-node-label">IoT</span></div></div>
+    <div class="orbit-node" id="on-mech"     data-angle="180" data-r="185"><div class="orbit-node-dot"><span class="orbit-node-icon">⚙️</span><span class="orbit-node-label">Mechatronics</span></div></div>
+    <div class="orbit-node" id="on-ee"       data-angle="225" data-r="185"><div class="orbit-node-dot"><span class="orbit-node-icon">⚡</span><span class="orbit-node-label">Electrical<br/>Eng.</span></div></div>
+    <div class="orbit-node" id="on-sdn"      data-angle="270" data-r="185"><div class="orbit-node-dot"><span class="orbit-node-icon">🔒</span><span class="orbit-node-label">SDN<br/>Security</span></div></div>
+    <div class="orbit-node" id="on-sports"   data-angle="315" data-r="185"><div class="orbit-node-dot"><span class="orbit-node-icon">🏈</span><span class="orbit-node-label">Sports<br/>Analytics</span></div></div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- TEACHING -->
+<!-- ═══════════════════════════════════════════ -->
+<section id="teaching" style="padding:5rem 2.5rem;">
+  <div style="max-width:920px;margin:0 auto;">
+    <p class="section-label reveal">teaching</p>
+    <div class="teaching-grid reveal">
+      <div class="teaching-card">
+        <span class="teaching-icon">🐍</span>
+        <div>
+          <div class="teaching-title">Python Programming</div>
+          <div class="teaching-desc">Teaching Python fundamentals through to applied ML — covering data structures, NumPy, pandas, PyTorch, and practical computer vision pipelines.</div>
+        </div>
+      </div>
+      <div class="teaching-card">
+        <span class="teaching-icon">⌨️</span>
+        <div>
+          <div class="teaching-title">C Language</div>
+          <div class="teaching-desc">Instruction in C programming — memory management, pointers, data structures, and systems-level thinking that underpins embedded and real-time applications.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- TESTIMONIALS -->
+<!-- ═══════════════════════════════════════════ -->
+<section id="testimonials" style="padding:5rem 2.5rem;">
+  <div style="max-width:920px;margin:0 auto;">
+    <p class="section-label reveal">testimonials</p>
+    <div class="testimonials-grid">
+
+      <div class="tval-card reveal">
+        <p class="tval-quote">Ahsan's GRAZE pipeline is a genuinely impressive piece of work — training-free, zero annotation cost, and it outperforms all baselines on every metric. He approaches hard problems with real engineering discipline.</p>
+        <div class="tval-person">
+          <div class="tval-avatar">WH</div>
+          <div>
+            <div class="tval-name">Dr. William Hsu</div>
+            <div class="tval-role">Professor · Kansas State University</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tval-card reveal" style="transition-delay:0.1s">
+        <p class="tval-quote">What sets Ahsan apart is his ability to bridge the gap between theory and practice. He doesn't just implement — he understands why something works, and that shows in the quality of his research output.</p>
+        <div class="tval-person">
+          <div class="tval-avatar">SD</div>
+          <div>
+            <div class="tval-name">Dr. Scott Dietrich</div>
+            <div class="tval-role">Co-advisor · Albright College</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tval-card reveal" style="transition-delay:0.15s">
+        <p class="tval-quote">As a student in Ahsan's Python class, the way he explains complex concepts — from list comprehensions to neural network training loops — is remarkably clear. You leave every session actually understanding things.</p>
+        <div class="tval-person">
+          <div class="tval-avatar">ST</div>
+          <div>
+            <div class="tval-name">Graduate Student</div>
+            <div class="tval-role">KSU Computer Science</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tval-card reveal" style="transition-delay:0.2s">
+        <p class="tval-quote">Ahsan has a rare combination of depth in computer vision and breadth across systems, IoT, and NLP. He's one of those researchers who can connect ideas across fields in ways most people can't.</p>
+        <div class="tval-person">
+          <div class="tval-avatar">LS</div>
+          <div>
+            <div class="tval-name">Dr. Lior Shamir</div>
+            <div class="tval-role">Professor · Kansas State University</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p style="margin-top:1.25rem;font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;font-style:italic;">
+      * Testimonial quotes are representative placeholders — replace with actual quotes from your advisors and students.
+    </p>
+  </div>
+</section>
+
+<hr class="divider"/>
 <!-- PAPERS -->
 <section id="papers">
   <p class="section-label reveal">papers</p>
@@ -504,6 +693,103 @@ footer{border-top:1px solid var(--border);padding:2rem 2.5rem;text-align:center;
   },{threshold:0.5});
   obs.observe(chart);
 })();
+
+/* ── ORBIT ANIMATION ── */
+(function(){
+  const wrap = document.getElementById('orbit-wrap');
+  const svg  = document.getElementById('orbit-svg');
+  if(!wrap || !svg) return;
+
+  const nodes = wrap.querySelectorAll('.orbit-node');
+  const cx = 400, cy = 260; // SVG center
+  let angle_offset = 0;
+  const BASE_ANGLES = {};
+  const RADII = {};
+
+  nodes.forEach(n => {
+    BASE_ANGLES[n.id] = parseFloat(n.dataset.angle) * Math.PI / 180;
+    RADII[n.id] = parseFloat(n.dataset.r);
+  });
+
+  // Draw orbit rings
+  const rings = new Set(Object.values(RADII));
+  rings.forEach(r => {
+    const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    circle.setAttribute('cx', cx);
+    circle.setAttribute('cy', cy);
+    circle.setAttribute('r', r * (800/520) * 0.62);
+    circle.setAttribute('fill','none');
+    circle.setAttribute('stroke','rgba(78,237,184,0.08)');
+    circle.setAttribute('stroke-width','1');
+    circle.setAttribute('stroke-dasharray','4 6');
+    svg.appendChild(circle);
+  });
+
+  // Draw spoke lines (static)
+  const linesGroup = document.createElementNS('http://www.w3.org/2000/svg','g');
+  linesGroup.id = 'spoke-lines';
+  svg.appendChild(linesGroup);
+
+  function getPos(nodeId, offset) {
+    const angle = BASE_ANGLES[nodeId] + offset;
+    const r = RADII[nodeId];
+    // Map from container coords to SVG viewBox
+    const svgR = r * 0.92;
+    return {
+      x: cx + svgR * Math.cos(angle),
+      y: cy + svgR * Math.sin(angle)
+    };
+  }
+
+  function positionNodes(offset) {
+    nodes.forEach(n => {
+      const angle = BASE_ANGLES[n.id] + offset;
+      const r = RADII[n.id];
+      // Position in actual container px
+      const W = wrap.offsetWidth || 860;
+      const H = wrap.offsetHeight || 520;
+      const x = W/2 + r * Math.cos(angle);
+      const y = H/2 + r * Math.sin(angle);
+      n.style.left = x + 'px';
+      n.style.top  = y + 'px';
+    });
+
+    // Update spoke lines in SVG
+    linesGroup.innerHTML = '';
+    nodes.forEach(n => {
+      const pos = getPos(n.id, offset);
+      const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+      line.setAttribute('x1', cx); line.setAttribute('y1', cy);
+      line.setAttribute('x2', pos.x); line.setAttribute('y2', pos.y);
+      line.setAttribute('stroke','rgba(78,237,184,0.12)');
+      line.setAttribute('stroke-width','1');
+      linesGroup.appendChild(line);
+    });
+  }
+
+  // Animate
+  function tick(ts) {
+    angle_offset = ts * 0.00018; // very slow rotation
+    positionNodes(angle_offset);
+    requestAnimationFrame(tick);
+  }
+
+  // Wait for element to be in DOM with dimensions
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting) {
+        requestAnimationFrame(tick);
+        obs.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.2});
+  obs.observe(wrap);
+
+  // Initial static position
+  positionNodes(0);
+  window.addEventListener('resize', () => positionNodes(angle_offset));
+})();
+
 </script>
 </body>
 </html>
